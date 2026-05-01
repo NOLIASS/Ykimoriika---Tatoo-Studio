@@ -1,0 +1,133 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: var(--bg);
+  border-top: 0.5px solid var(--border);
+}
+
+.photoSide {
+  position: relative;
+  min-height: 600px;
+  background-color: var(--bg-card);
+  border-right: 0.5px solid var(--border);
+}
+
+.photoPlaceholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photoPlaceholderText {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--border);
+  font-weight: 300;
+}
+
+.photoCaption {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  border-left: 0.5px solid var(--accent);
+  padding-left: 16px;
+}
+
+.photoCaptionLabel {
+  margin: 0;
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.photoCaptionCity {
+  margin: 4px 0 0;
+  font-family: var(--font-serif);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--text-primary);
+}
+
+.textSide {
+  padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 64px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+
+.tag {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.heading em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.textGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin: 0;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.styleTag {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  border: 0.5px solid var(--border);
+  padding: 8px 14px;
+  font-weight: 300;
+}
+
+.link {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-weight: 300;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .photoSide {
+    min-height: 400px;
+    border-right: none;
+    border-bottom: 0.5px solid var(--border);
+  }
+}

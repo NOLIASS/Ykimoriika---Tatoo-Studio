@@ -1,0 +1,125 @@
+.section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  min-height: 88vh;
+  background-color: var(--bg);
+}
+
+.left {
+  padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 0.5px solid var(--border);
+  gap: 40px;
+}
+
+.tag {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.heading em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.desc {
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin: 0;
+  letter-spacing: 0.02em;
+  max-width: 340px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.btnPrimary {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  padding: 14px 32px;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 300;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btnGhost {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 300;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  min-height: clamp(300px, 50vw, 600px);
+}
+
+.photoCell {
+  background: var(--bg-hover);
+  border: 0.5px solid var(--border);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photoCell img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.photoLabel {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #4a453e;
+  font-weight: 300;
+  position: relative;
+  z-index: 1;
+}

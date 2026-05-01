@@ -1,0 +1,27 @@
+
+:root {
+  --bg: #0c0b09;
+  --bg-card: #0f0e0c;
+  --bg-hover: #161410;
+  --border: #2a2720;
+  --text-primary: #e8e2d9;
+  --text-muted: #6a6257;
+  --text-dim: #3a3630;
+  --accent: #c4b49a;
+
+  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Jost', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text-primary);
+}
+

@@ -1,0 +1,46 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(16px, 2vw, 22px) clamp(20px, 5vw, 52px);
+  background-color: var(--bg);
+  border-bottom: 0.5px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(16px, 2vw, 22px);
+  letter-spacing: 0.18em;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  gap: clamp(16px, 3vw, 36px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9a9186;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.25s;
+}
+
+.link:hover {
+  color: var(--text-primary);
+}
+
+.linkActive {
+  color: var(--text-primary);
+}

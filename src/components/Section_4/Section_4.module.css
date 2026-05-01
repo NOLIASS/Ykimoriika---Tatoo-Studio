@@ -1,0 +1,86 @@
+.section {
+  background-color: var(--bg);
+  border-top: 0.5px solid var(--border);
+  padding: clamp(60px, 10vw, 120px) clamp(20px, 5vw, 52px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.tag {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin: 0;
+  max-width: 700px;
+}
+
+.heading em {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.body {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text-muted);
+  font-weight: 300;
+  margin: 0;
+  max-width: 400px;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.btnPrimary {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--bg);
+  background-color: var(--text-primary);
+  padding: 14px 32px;
+  text-decoration: none;
+  border: 0.5px solid var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btnPrimary:hover {
+  background-color: transparent;
+  color: var(--text-primary);
+}
+
+.btnGhost {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: var(--text-primary);
+  background-color: transparent;
+  padding: 14px 32px;
+  text-decoration: none;
+  border: 0.5px solid var(--border);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.btnGhost:hover {
+  border-color: var(--text-primary);
+}
