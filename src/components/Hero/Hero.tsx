@@ -1,16 +1,21 @@
 import styles from './Hero.module.css'
 
+import p1 from '../../assets/photo1.jpg'
+import p2 from '../../assets/photo2.jpg'
+import p5 from '../../assets/photo5.jpg'
+import p4 from '../../assets/photo4.jpg'
 
 
 
-  
+
+
 
 function Hero() {
   const photos = [
-    { n: '01', src: '/photo1.jpg' },
-    { n: '02', src: '/photo2.jpg' },
-    { n: '03', src: '/photo5.jpg' },
-    { n: '04', src: '/photo4.jpg' },
+    { n: '01', src: p1 },
+    { n: '02', src: p2 },
+    { n: '03', src: p5 },
+    { n: '04', src: p4 },
   ]
 
   return (

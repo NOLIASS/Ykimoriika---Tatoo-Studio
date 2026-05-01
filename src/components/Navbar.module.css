@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: clamp(16px, 2vw, 22px) clamp(20px, 5vw, 52px);
+  padding: 18px clamp(20px, 5vw, 52px);
   background-color: var(--bg);
   border-bottom: 0.5px solid var(--border);
   position: sticky;
@@ -16,10 +16,11 @@
   font-size: clamp(16px, 2vw, 22px);
   letter-spacing: 0.18em;
   color: var(--text-primary);
-  margin: 0;
+  text-decoration: none;
 }
 
-.links {
+/* ДЕСКТОП */
+.desktopLinks {
   display: flex;
   gap: clamp(16px, 3vw, 36px);
   list-style: none;
@@ -31,7 +32,7 @@
   font-size: 11px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: #9a9186;
+  color: var(--text-muted);
   text-decoration: none;
   font-weight: 300;
   transition: color 0.25s;
@@ -41,6 +42,111 @@
   color: var(--text-primary);
 }
 
-.linkActive {
+.active {
   color: var(--text-primary);
+}
+
+/* БУРГЕР */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.line1, .line2, .line3 {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-primary);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.line1Open {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-primary);
+  transform: translateY(7px) rotate(45deg);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.line2Open {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-primary);
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.line3Open {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--text-primary);
+  transform: translateY(-7px) rotate(-45deg);
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+/* МОБІЛЬНЕ МЕНЮ */
+.mobileMenu {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+}
+
+.backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.drawer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  max-width: 280px;
+  height: 100vh;
+  background-color: var(--bg);
+  border-left: 0.5px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  padding: 80px 36px 40px;
+  gap: 36px;
+}
+
+.mobileLink {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 300;
+  color: var(--text-muted);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  transition: color 0.2s;
+}
+
+.mobileLink:hover {
+  color: var(--accent);
+}
+
+.mobileLink.active {
+  color: var(--accent);
+}
+
+@media (max-width: 768px) {
+  .desktopLinks {
+    display: none;
+  }
+  .burger {
+    display: flex;
+  }
 }

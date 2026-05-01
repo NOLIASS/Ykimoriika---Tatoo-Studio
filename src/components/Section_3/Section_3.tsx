@@ -1,11 +1,12 @@
 import styles from './Section_3.module.css'
+import artistPhoto from '../../assets/photo_2026-05-01_13-08-34.jpg'
 
 function Section_3() {
   return (
     <section className={styles.section}>
       <div className={styles.photoSide}>
          <img
-            src="/photo_2026-05-01_13-08-34.jpg"
+            src={artistPhoto}
             alt="Artist"
             style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }}
           />

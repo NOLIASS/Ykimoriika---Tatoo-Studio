@@ -1,4 +1,5 @@
 import styles from './About.module.css'
+import artistPhoto from '../../assets/photo_2026-05-01_13-08-34.jpg'
 
 const skills = [
   { label: 'Fine line', level: 95 },
@@ -25,7 +26,7 @@ function About() {
     <>
       <section className={styles.hero}>
         <div className={styles.photoSide}>
-          <img src="/photo_2026-05-01_13-08-34.jpg" alt="Artist" className={styles.photo} />
+          <img src={artistPhoto} alt="Artist" className={styles.photo} />
           <div className={styles.photoCaption}>
             <p className={styles.photoCaptionLabel}>Tattoo artist</p>
             <p className={styles.photoCaptionName}>Ykimoriiki</p>

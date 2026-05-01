@@ -1,71 +1,52 @@
-import { colors, fonts } from '../styles/tokens'
-import { tag, bodyText, btnPrimary } from '../styles/mixins'
+import { Link } from 'react-router-dom'
+import styles from './Footer.module.css'
 
 function Footer() {
-  const links = {
-    navigation: [
-      { label: 'Home', href: '/' },
-      { label: 'Portfolio', href: '/portfolio' },
-      { label: 'About', href: '/about' },
-      { label: 'Booking', href: '/booking' },
-    ],
-    social: [
-      { label: 'Instagram', href: 'https://www.instagram.com/ykimoriika/' },
-      { label: 'Telegram', href: 'https://t.me' },
-      { label: 'Pinterest', href: 'https://pinterest.com' },
-    ],
-  }
+  const navLinks = [
+    { label: 'Home', to: '/' },
+    { label: 'Portfolio', to: '/portfolio' },
+    { label: 'About', to: '/about' },
+    { label: 'Booking', to: '/booking' },
+  ]
 
-  const linkStyle = { fontSize: '12px', letterSpacing: '0.1em', color: colors.textMuted, textDecoration: 'none', fontWeight: 300, transition: 'color 0.2s' }
+  const socialLinks = [
+    { label: 'Instagram', href: 'https://www.instagram.com/ykimoriika/' },
+    { label: 'Telegram', href: 'https://t.me' },
+    { label: 'Pinterest', href: 'https://pinterest.com' },
+  ]
 
   return (
-    <footer style={{ backgroundColor: colors.bg, borderTop: `0.5px solid ${colors.border}`, padding: 'clamp(40px, 6vw, 64px) clamp(20px, 5vw, 52px) 32px' }}>
+    <footer className={styles.footer}>
+      <div className={styles.top}>
 
-      <div style={{
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-        gap: '52px',
-        paddingBottom: '52px',
-        borderBottom: `0.5px solid ${colors.border}`,
-      }}>
-        {/* Brand */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
-          <h2 style={{ fontFamily: fonts.serif, fontWeight: 300, fontSize: '32px', letterSpacing: '0.1em', color: colors.textPrimary, margin: 0 }}>
-            YKIMORIIKI
-          </h2>
-          <p style={bodyText({ fontSize: '12px', maxWidth: '280px' })}>
-            Fine line & graphic tattoo artist based in Lutsk, Ukraine. Working by appointment only.
-          </p>
-          <a href="/booking" style={{ ...btnPrimary, padding: '12px 24px', width: 'fit-content' }}>Book now</a>
+        <div className={styles.brand}>
+          <span className={styles.brandName}>Ykimoriiki</span>
+          <p className={styles.brandDesc}>Fine line & graphic tattoo artist based in Lutsk, Ukraine. Working by appointment only.</p>
+          <Link to="/booking" className={styles.btn}>Book a session</Link>
         </div>
 
-        {/* Navigation */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <span style={tag({ marginBottom: '12px' })}>Navigation</span>
-          {links.navigation.map(({ label, href }) => (
-            <a key={label} href={href} style={linkStyle}
-              onMouseEnter={e => (e.currentTarget.style.color = colors.textPrimary)}
-              onMouseLeave={e => (e.currentTarget.style.color = colors.textMuted)}
-            >{label}</a>
-          ))}
+        <div className={styles.cols}>
+          <div className={styles.col}>
+            <span className={styles.colTitle}>Navigation</span>
+            {navLinks.map(({ label, to }) => (
+              <Link key={to} to={to} className={styles.colLink}>{label}</Link>
+            ))}
+          </div>
+
+          <div className={styles.col}>
+            <span className={styles.colTitle}>Social</span>
+            {socialLinks.map(({ label, href }) => (
+              <a key={label} href={href} target="_blank" rel="noreferrer" className={styles.colLink}>{label}</a>
+            ))}
+          </div>
         </div>
 
-        {/* Social */}
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-          <span style={tag({ marginBottom: '12px' })}>Social</span>
-          {links.social.map(({ label, href }) => (
-            <a key={label} href={href} target="_blank" rel="noreferrer" style={linkStyle}
-              onMouseEnter={e => (e.currentTarget.style.color = colors.textPrimary)}
-              onMouseLeave={e => (e.currentTarget.style.color = colors.textMuted)}
-            >{label}</a>
-          ))}
-        </div>
       </div>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '28px', flexWrap: 'wrap', gap: '12px' }}>
-        {['© 2025 Ykimoriiki', 'Lutsk, Ukraine', 'By appointment only'].map((t) => (
-          <span key={t} style={tag({ color: colors.textDim })}>{t}</span>
-        ))}
+      <div className={styles.bottom}>
+        <span>© 2025 Ykimoriiki</span>
+        <span>Lutsk, Ukraine</span>
+        <span>By appointment only</span>
       </div>
     </footer>
   )

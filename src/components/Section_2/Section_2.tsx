@@ -1,12 +1,19 @@
 import styles from './Section_2.module.css'
 
+import photo1 from '../../assets/photo1.jpg'
+import photo2 from '../../assets/photo2.jpg'
+import photo4 from '../../assets/photo4.jpg'
+import photo5 from '../../assets/photo5.jpg'
+import photo6 from '../../assets/photo6.jpg'
+import photo7 from '../../assets/photo7.jpg'
+
 const works = [
-  { id: '01', src: '/photo1.jpg', title: 'Ornamental sleeve', style: 'Fine line' },
-  { id: '02', src: '/photo2.jpg', title: 'Botanical study', style: 'Graphic' },
-  { id: '03', src: '/photo7.jpg', title: 'Geometric mandala', style: 'Ornamental' },
-  { id: '04', src: '/photo4.jpg', title: 'Abstract portrait', style: 'Fine line' },
-  { id: '05', src: '/photo5.jpg', title: 'Minimalist flora', style: 'Fine line' },
-  { id: '06', src: '/photo6.jpg', title: 'Sacred geometry', style: 'Graphic' },
+  { id: '01', src: photo1, title: 'Ornamental sleeve', style: 'Fine line' },
+  { id: '02', src: photo2, title: 'Botanical study', style: 'Graphic' },
+  { id: '03', src: photo7, title: 'Geometric mandala', style: 'Ornamental' },
+  { id: '04', src: photo4, title: 'Abstract portrait', style: 'Fine line' },
+  { id: '05', src: photo5, title: 'Minimalist flora', style: 'Fine line' },
+  { id: '06', src: photo6, title: 'Sacred geometry', style: 'Graphic' },
 ]
 
 function Section_2() {
