@@ -16,8 +16,6 @@ const works = [
   { id: '05', src: p6, title: 'Minimalist flora', style: 'Fine line', year: '2024' },
   { id: '06', src: p7, title: 'Sacred geometry', style: 'Graphic', year: '2023' },
   { id: '07', src: p8, title: 'Blackwork serpent', style: 'Blackwork', year: '2024' },
-  { id: '08', src: p2, title: 'Dotwork sun', style: 'Ornamental', year: '2022' },
-  { id: '09', src: p6, title: 'Fine line moth', style: 'Fine line', year: '2024' },
 ]
 
 const filters = ['All', 'Fine line', 'Graphic', 'Ornamental', 'Blackwork']
