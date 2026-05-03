@@ -6,7 +6,6 @@ import p5 from '../../assets/photo5.jpg'
 import p6 from '../../assets/photo6.jpg'
 import p7 from '../../assets/photo7.jpg'
 import p8 from '../../assets/photo8.jpg'
-import p9 from '../../assets/photo9.jpg'
 
 
 const works = [
@@ -17,7 +16,6 @@ const works = [
   { id: '05', src: p6, title: 'Minimalist flora', style: 'Fine line', year: '2024' },
   { id: '06', src: p7, title: 'Sacred geometry', style: 'Graphic', year: '2023' },
   { id: '07', src: p8, title: 'Blackwork serpent', style: 'Blackwork', year: '2024' },
-  { id: '08', src: p9, title: 'Blackwork serpent', style: 'Blackwork', year: '2024' },
 ]
 
 const filters = ['All', 'Fine line', 'Graphic', 'Ornamental', 'Blackwork']
